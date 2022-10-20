@@ -8,7 +8,8 @@
 //palindrome 
 //console.log('object')
 
-function palindrome  (frase) {
+//funcion que retorna 'false' si el string solo contiene letras y true si no solo contiene letras
+function palindromeError  (frase) {
 const palabra = frase.toLowerCase()
 let codigo = []
 for(let i=0; i<palabra.length; i++ ){
@@ -19,4 +20,22 @@ for(let i=0; i<palabra.length; i++ ){
 return (codigo.includes(false)?true:false)
 }
 
-console.log(palindrome ("race a car"))
+// EJERCICIO RESUELTO:
+//funcion que retorna 'false' si el string no es palindromo y true si es palindromo
+function palindrome  (frase) {
+    const palabra = frase.toLowerCase()
+    let codigo = []
+    for(let i=0; i<palabra.length; i++ ){
+        //97 -122
+        let letra = palabra[i].charCodeAt(0)
+        codigo.push(((letra>=97) && (letra<=122))?palabra[i]:'')
+    }
+    
+    let palabraString=codigo.join('')
+    let codigoReverse=codigo.reverse()
+    let palabraReverse=codigoReverse.join('')
+    return (palabraString===palabraReverse)
+    }
+    
+    console.log(palindrome ("A man, a plan, a canal: Panama"))
+    console.log(palindrome ("race a car"))
