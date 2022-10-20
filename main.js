@@ -37,5 +37,5 @@ function palindrome  (frase) {
     return (palabraString===palabraReverse)
     }
     
-    console.log(palindrome ("A man, a plan, a canal: Panama")
-    console.log(palindrome ("race a car")
+    console.log(palindrome ("A man, a plan, a canal: Panama"))
+    console.log(palindrome ("race a car"))
